@@ -1,0 +1,7 @@
+{
+  "name": "ct-mob",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
