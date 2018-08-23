@@ -7,6 +7,24 @@
 <menu></menu>
 
 
-<ion-content padding>
+<ion-content padding style="margin-top: 75px">
 
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Start Time</ion-label>
+      <ion-datetime displayFormat="YYYY-MM-DD" pickerFormat="YYYY-MM-DD" [(ngModel)]="today"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Select Attendance Code</ion-label>
+      <ion-select [(ngModel)]="attendance">
+        <ion-option value="Present">Present</ion-option>
+        <ion-option value="Absent">Absent</ion-option>
+        <!--<ion-option *ngFor="let option of attendanceOptions" value="{{option.value}}"{{option.key}}</ion-option>-->
+      </ion-select>
+    </ion-item>
+      <button ion-button color="light" ion-button full style="margin-top: 25px">Submit</button>
+
+
+  </ion-list>
 </ion-content>
