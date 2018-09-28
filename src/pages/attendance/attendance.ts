@@ -15,6 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'attendance.html',
 })
 export class AttendancePage {
+  today = "";
   items = [
     'Present',
     'Personal Leave',
