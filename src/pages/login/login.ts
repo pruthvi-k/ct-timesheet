@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {IonicPage, NavController, NavParams, AlertController} from 'ionic-angular';
+import {AuthServiceProvider} from "../../providers/auth-service/auth-service";
 
 /**
  * Generated class for the LoginPage page.
@@ -15,11 +16,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public authService: AuthServiceProvider, public alertCtrl: AlertController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+  nextPage() {
+    this.navCtrl.push('Home').catch(err=>{
+      let alert = this.alertCtrl.create({
+        title: 'No Entry',
+        buttons: ['Ok']
+      })
+    })
+  }
+
+  loginUser() {
+    this.authService.login();
+  }
+
+  isAuthenticated() {
+    return this.authService.authenticated();
   }
 
 }

@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {AuthServiceProvider} from "../../providers/auth-service/auth-service";
 // import { DatePicker } from '@ionic-native/date-picker'
 
 /**
@@ -33,12 +34,12 @@ export class AttendancePage {
     }
   ];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public authService: AuthServiceProvider) {
     this.today = new Date().toISOString();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AttendancePage');
+  ionViewCanEnter() {
+    return this.authService.authenticated();
   }
 
   onSubmit() {
