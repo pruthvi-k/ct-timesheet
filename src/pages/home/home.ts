@@ -12,6 +12,6 @@ export class HomePage {
   }
 
   ionViewCanEnter() {
-    return this.authService.authenticated();
+   // return this.authService.authenticated();
   }
 }

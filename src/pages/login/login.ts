@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {IonicPage, NavController, NavParams, AlertController} from 'ionic-angular';
 import {AuthServiceProvider} from "../../providers/auth-service/auth-service";
-
+//import { AttendancePage } from '../../pages/attendance/attendance';
 /**
  * Generated class for the LoginPage page.
  *
@@ -20,16 +20,21 @@ export class LoginPage {
   }
 
   nextPage() {
-    this.navCtrl.push('Home').catch(err=>{
+    this.navCtrl.push('AttendancePage').catch(err=>{
+		console.log('error', err);
       let alert = this.alertCtrl.create({
         title: 'No Entry',
         buttons: ['Ok']
       })
+	  alert.present();
     })
+	
+	
   }
 
   loginUser() {
     this.authService.login();
+	this.nextPage();
   }
 
   isAuthenticated() {

@@ -4,7 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { ProfilePage } from '../pages/profile/profile';
-import { AttendancePage } from '../pages/attendance/attendance';
+//import { AttendancePage } from '../pages/attendance/attendance';
 import { MusterPage } from '../pages/muster/muster';
 import {LoginPage} from '../pages/login/login';
 import {MenuComponent} from '../components/menu/menu';
@@ -18,7 +18,7 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
   declarations: [
     MyApp,
     ProfilePage,
-    AttendancePage,
+   // AttendancePage,
     MusterPage,
     LoginPage,
     MenuComponent
@@ -31,7 +31,7 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
   entryComponents: [
     MyApp,
     ProfilePage,
-    AttendancePage,
+   // AttendancePage,
     MusterPage,
     LoginPage
   ],
