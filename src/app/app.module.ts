@@ -9,7 +9,6 @@ import { MusterPage } from '../pages/muster/muster';
 import {LoginPage} from '../pages/login/login';
 import {MenuComponent} from '../components/menu/menu';
 
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';

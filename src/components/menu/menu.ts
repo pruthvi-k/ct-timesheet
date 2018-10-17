@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
  * Components.
  */
 @Component({
-  selector: 'menu',
+  selector: 'menu-component',
   templateUrl: 'menu.html'
 })
 export class MenuComponent {
